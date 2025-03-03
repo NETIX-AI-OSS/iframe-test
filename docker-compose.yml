@@ -1,8 +1,7 @@
 services:
-  nginx:
-    image: nginx:alpine
+  iframe-test:
+    image: asia-south2-docker.pkg.dev/stage-4t5/platform/iframe-test:latest
+    build: .
     ports:
-      - "8080:80"
-    volumes:
-      - ./test.html:/usr/share/nginx/html/index.html
+      - "8080:8080"
     restart: unless-stopped 
